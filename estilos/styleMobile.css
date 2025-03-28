@@ -22,7 +22,7 @@
     body{
         display: grid;
         grid-template-rows: repeat(5,1fr);
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr; */
     
         grid-template-areas: 
         "header"
@@ -32,6 +32,8 @@
         "contato";
     
         background-image: linear-gradient(to top, #222 70%, #444);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     
     
@@ -97,9 +99,9 @@
       /* ================ IMAGEM PERFIL ===================*/
 
       .imgPerfil{
-        border: 2px solid #9E5FEC;
-        width: 250px;
-        height: 250px;
+        border: 1.1px solid #9E5FEC;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         margin: auto;
         margin-top: 45px;
@@ -119,13 +121,15 @@
       .dadosPerfil{
         color: #f1f1f1;
         font-family: var(--fontTexto);
-        font-size: .6em;
+        font-size: .5em;
         text-align: center;
 
         padding: 5px;
         margin-top: 10px;
         font-weight: normal;
         letter-spacing: .5px;
+
+        grid-area: perfilDados;
       }
 
       .dadosSobre{
@@ -136,13 +140,13 @@
         padding: 15px;
         margin-top: 25px;
       }
-      .divDados{
-       
-      }
+     
       .divDados > h2{
         font-family: var(--fontFuncional);
-        color: #8E3EF1;
         letter-spacing: 1px;
+        font-size: 1.4em;
+
+        color: #8E3EF1;
 
         display: flex;
         align-items: center;
@@ -152,10 +156,10 @@
       .divDados > h2::before{
         display: block;
         content: ' ';
-        width: 7px;
-        height: 7px;
+        width: 5px;
+        height: 5px;
         background-color: #8E3EF1;
-        border-radius: 50%;
+        border-radius: 100%;
         margin-right: 5px;
 
        
@@ -169,15 +173,19 @@
       ul > li{
         margin-bottom: 5px;
         font-family: var(--fontTexto);
-        font-size: 1.3em;
+        font-size: 1.2em;
       }
       .divCertificados{
         grid-column: 3/4;
       }
       .divCertificados > ul > li{
-        text-decoration: underline #9E5FEC 1.2px;
+        text-decoration: underline #9E5FEC 1.1px;
         text-underline-offset: 2px;
-        
+        cursor: pointer;
+        transition: .3s;
+      }
+      .divCertificados > ul > li:hover{
+        color: #a36be7;
       }
       .divDadoPessoais{
         margin-top: 35px;
@@ -185,7 +193,110 @@
         grid-column: 1/4;
        
         text-align: center;
-        text-indent: 25px;
+        
       }
+
+      /* ================ LINHA SEPARADORA ===================*/
+
+      .linhaSeparadora{
+        display: block;
+        border: 1px solid #f8f8f81c;
+        width: 80%;
+        margin: auto;
+        margin-top: 15px;
+      }
+
+      /* ================ PROJETOS ===================*/
+
+      .secProjetos{
+       grid-area: projetos;
+       display: grid;
+       margin-top: 30px;
+       
+       grid-template-columns: repeat(3,1fr);
+       grid-template-rows: repeat(3,1fr);
+       grid-template-areas: 
+       "h2 . ."
+       "proj1 proj2 proj3"
+       "proj4 proj5 .";
+
+       gap: 10px;
+       padding: 5px;
+       
+      }
+
+      .titProjetos{
+        color: #f8f8f8;     
+        background-color: #8E3EF1;
+        margin-left: 14px;
+        margin-top: 45px;
+        font-size: .8em;
+        letter-spacing: .5px;
+        font-family: var(--fontFuncional);
+
+        width: 100px;
+        height: 30px;
+        border-radius: 10px 1px 10px 1px;
+        border: 1px solid #9E5FEC;
+        box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.256);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         
+       }
+       .conteinerPrjt{
+        width: 150px;
+        height: 120px;
+       }
+       .proj1{
+        grid-area: proj1;
+       }
+       .proj2{
+        grid-area: proj2;
+       }
+       .proj3{
+        grid-area: proj3;
+       }
+       .proj4{
+        grid-area: proj4;
+       }
+       .proj5{
+        grid-area: proj5;
+       }
+
+       
+
+       .conteinerPrjt{
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+       .conteinerPrjt > img{
+        width: 149px;
+        height: 85px;
+        border-radius: 10px;
+        border: 1px solid #f1f1f14e;
+        box-shadow: 1px 1px 1px 1px rgba(163, 48, 174, 0.204);
+       }
+       .conteinerPrjt > p{
+         width: 120px;
+         height: 22px;
+         margin-top: 7px;
+
+         border: 1px solid #9E5FEC;
+         border-radius: 10px 1px 10px 1px;
+
+         font-family: var(--fontFuncional);
+         font-size: .8em;
+         letter-spacing: .9px;
+         font-weight: 500;
+         color: #f8f8f8;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+       }
       
 }
