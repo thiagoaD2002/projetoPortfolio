@@ -129,7 +129,7 @@
         text-align: center;
 
         padding: 5px;
-        max-width: 400px;
+        max-width: 380px;
         margin: auto;
         margin-top: 10px;
         font-weight: normal;
@@ -221,7 +221,7 @@
 
        margin: auto;
        margin-top: 30px;
-       width: 400px;
+       width: 350px;
        
        flex-direction: column;
        gap: 10px;
@@ -233,12 +233,14 @@
         display: flex;
         gap: 15px;
         margin-top: 30px;
+        padding: 10px;
         
       }
       .rolagemLateral::-webkit-scrollbar{
         background-color: #f8f8f8;
         border-radius: 5px;
-        
+        height: 10px;
+        border: 1px solid #9E5FEC;
       }
       .rolagemLateral::-webkit-scrollbar-thumb{
         border-radius: 5px;
@@ -246,7 +248,7 @@
         width: 50px;
       }
 
-      .titProjetos{
+      .titProjetos,.contatoTitulo{
         color: #f8f8f8;     
         background-color: #8E3EF1;
         margin-left: 14px;
@@ -270,23 +272,8 @@
         width: 150px;
         height: 120px;
         display: inline-block;
+        
        }
-       .proj1{
-        grid-area: proj1;
-       }
-       .proj2{
-        grid-area: proj2;
-       }
-       .proj3{
-        grid-area: proj3;
-       }
-       .proj4{
-        grid-area: proj4;
-       }
-       .proj5{
-        grid-area: proj5;
-       }
-
        
 
        .conteinerPrjt{
@@ -294,6 +281,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+
        }
        .conteinerPrjt > img{
         width: 149px;
@@ -320,5 +309,39 @@
          align-items: center;
          justify-content: center;
        }
-      
+       .linha2{
+        margin-top: 35px;
+       }
+      /* ================ CONTATO ===================*/
+      .secContato{
+        padding: 10px;
+      }
+       .contatoTitulo{
+        margin-left: 81px;
+        letter-spacing: .8px;
+       }
+       .pContato{
+        color: #8E3EF1;
+        font-family: var(--fontFuncional);
+        font-weight: 500;
+        font-size: 1em;
+        margin-left: 80px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+
+       }
+       .iconEmail,.iconFone{
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+       }
+       .pDadosContato{
+        margin-left: 90px;
+        margin-top: 10px;
+        color: #f8f8f8;
+
+        font-family: var(--fontTexto);
+        font-size: .8em;
+       }
 }
