@@ -138,6 +138,11 @@
         grid-area: perfilDados;
         
       }
+      .dadosPerfil > h1{
+        
+        max-width: 350px;
+        margin: auto;
+      }
 
       .dadosSobre{
         display: grid;
@@ -152,7 +157,7 @@
         font-family: var(--fontFuncional);
         letter-spacing: 1px;
         font-size: 1.4em;
-
+        
         color: #8E3EF1;
 
         display: flex;
