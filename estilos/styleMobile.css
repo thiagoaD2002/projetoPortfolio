@@ -276,19 +276,19 @@
        .conteinerPrjt{
         width: 150px;
         height: 120px;
-        display: inline-block;
-        
-       }
-       
-
-       .conteinerPrjt{
-       
         display: flex;
         flex-direction: column;
         align-items: center;
         
+        cursor: pointer;
+
+      }
+      .conteinerPrjt:hover{
+         animation: up forwards linear .3s ;
+         
 
        }
+       
        .conteinerPrjt > img{
         width: 149px;
         height: 85px;
@@ -314,15 +314,20 @@
          align-items: center;
          justify-content: center;
        }
+       
        .linha2{
         margin-top: 35px;
        }
       /* ================ CONTATO ===================*/
       .secContato{
+        width: 350px;
+        margin: auto;
         padding: 10px;
+        border: 1px solid red;
+
+        grid-area: contato;
       }
        .contatoTitulo{
-        margin-left: 81px;
         letter-spacing: .8px;
        }
        .pContato{
@@ -330,7 +335,7 @@
         font-family: var(--fontFuncional);
         font-weight: 500;
         font-size: 1em;
-        margin-left: 80px;
+        margin-left: 14px;
         margin-top: 20px;
         display: flex;
         align-items: center;
@@ -342,11 +347,21 @@
         margin-right: 5px;
        }
        .pDadosContato{
-        margin-left: 90px;
+        margin-left: 30px;
         margin-top: 10px;
         color: #f8f8f8;
 
         font-family: var(--fontTexto);
         font-size: .8em;
+       }
+
+       @keyframes up{
+        from{
+          opacity: 1;
+        }
+        to{
+          opacity: 1;
+          scale: 1.1;
+        }
        }
 }
