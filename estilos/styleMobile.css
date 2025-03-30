@@ -35,24 +35,33 @@
         "projetos"
         "contato";
     
-        background-image: linear-gradient(to top, #222 70%, #444);
+        /* background-image: linear-gradient(to top, #222 70%, #444); */
+        background-color: #222;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        /* padding: 50px; */
+        margin-top: 70px;
     }
     
     
     /* ================ CABEÇALHO ===================*/
     
     header{
-        background-color: #393939;
+        background-color: #222;
         width: 100%;
         height: 60px;
         /* border: 1px solid red; */
-        box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.256);
+        box-shadow: 0px 80px 80px 90px rgba(119, 119, 119, 0.048);
 
         display: flex;
         justify-content: space-between;
         grid-area: header;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+      
+       
 
     }
 
@@ -284,7 +293,7 @@
 
       }
       .conteinerPrjt:hover{
-         animation: up forwards linear .3s ;
+         animation: up forwards linear .2s ;
          
 
        }
