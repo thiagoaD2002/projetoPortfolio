@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+
+    --fontFuncional:"Roboto", sans-serif;
+    --fontTexto: "Poppins", sans-serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* hoverflow-x: hidden; */
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    grid-template-areas: 
+    "header"
+    "imgPerfil"
+    "perfilDados"
+    "projetos"
+    "contato";
+
+   
+    background-color: #222;
+    margin-top: 70px;
+}
+/* ================ CABEÇALHO ===================*/
+    
+header{
+    background-color: #222;
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid red; */
+    box-shadow: 0px 80px 80px 90px rgba(119, 119, 119, 0.048);
+
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+   
+
+}
+button{
+    width: 150px;
+    height: 40px;
+
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.114);
+    cursor: pointer;
+
+
+}
+.btnPgInicial{
+        background-color: #8E3EF1;
+        color: #f8f8f8;
+        font-family: var(--fontFuncional);
+        font-weight: 500;
+        border: 1px solid #9E5FEC;
+
+        margin-left: 30px;
+        margin-top: 10px;
+
+        transition: .3s;
+
+   
+}
+.btnPgInicial:hover{
+    background-color: #8f3ef1e6;
+
+}
+
+/* ================ IMAGEM PERFIL ===================*/
+
+.imgPC{
+    border: 1.1px solid #9E5FEC;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 45px;
+
+    background-image: url(../midia/perfilImagem.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.259);
+
+    grid-area: imgPerfil;
+  }
+/* ================ PERFIL DADOS ===================*/
+
+
+.dadosPerfil{
+    color: #f1f1f1;
+    font-family: var(--fontTexto);
+    font-size: .6em;
+    text-align: center;
+
+    padding: 5px;
+    width: 800px;
+    margin: auto;
+    margin-top: 10px;
+    font-weight: normal;
+    letter-spacing: .5px;
+
+    grid-area: perfilDados;
+  }
+  .dadosPerfil > h1{
+        
+    width: 600px;
+    margin: auto;
+  }
+  .dadosSobre{
+
+    padding: 15px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .divDados > h2{
+    font-family: var(--fontFuncional);
+    letter-spacing: 1px;
+    font-size: 1.6em;
+    
+    color: #8E3EF1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .divDados > h2::before{
+    display: block;
+    content: ' ';
+    width: 5px;
+    height: 5px;
+    background-color: #8E3EF1;
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+
+  ul{
+    list-style-type: none;
+    list-style-position: inside;
+    margin-top: 10px;
+  }
+  ul > li{
+    margin-bottom: 5px;
+    font-family: var(--fontTexto);
+    font-size: 1.3em;
+  }
+
+  .divCertificados > ul > li{
+    text-decoration: underline #9E5FEC 1.1px;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  .divCertificados > ul > li:hover{
+    color: #a36be7;
+  }
+     /* ================ LINHA SEPARADORA ===================*/
+
+     .linhaSeparadora{
+        display: block;
+        border: 1px solid #f8f8f81c;
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+      }
+
+  /* ================ PROJETOS ===================*/
+
+  .secProjetos{
+   grid-area: projetos;
+   display: flex;
+
+   margin: auto;
+   margin-top: 30px;
+   width: 60%;
+   
+   flex-direction: column;
+   gap: 10px;
+   padding: 5px;
+
+  
+   
+  }
+  .rolagemLateral{
+    overflow-x: scroll;
+    display: flex;
+    gap: 15px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+
+  
+    
+
+   width: 700px;
+   height: 350px;
+    
+  }
+  .rolagemLateral::-webkit-scrollbar{
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    height: 10px;
+    border: 1px solid #9E5FEC;
+
+   
+  }
+  .rolagemLateral::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: #9E5FEC;
+    width: 50px;
+  }
+
+  .titProjetos,.contatoTitulo{
+    color: #f8f8f8;     
+    background-color: #8E3EF1;
+    margin-left: 14px;
+    margin-top: 45px;
+    font-size: 1em;
+    letter-spacing: .5px;
+    font-family: var(--fontFuncional);
+
+    width: 350px;
+    height: 45px;
+    border-radius: 10px 2px 10px 2px;
+    border: 1px solid #9E5FEC;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.256);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+     
+   }
+   .conteinerPrjt{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    cursor: pointer;
+
+  }
+  .conteinerPrjt:hover{
+     animation: up forwards linear .2s ;
+     
+
+   }
+   
+   .conteinerPrjt > img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid #f1f1f14e;
+    box-shadow: 1px 1px 1px 1px rgba(163, 48, 174, 0.204);
+   }
+   .conteinerPrjt > p{
+     width: 200px;
+     height: 40px;
+     margin-top: 15px;
+
+     border: 1px solid #9E5FEC;
+     border-radius: 10px 2px 10px 2px;
+
+     font-family: var(--fontFuncional);
+     font-size: .8em;
+     letter-spacing: .9px;
+     font-weight: 500;
+     color: #f8f8f8;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   .linha2{
+    margin-top: 35px;
+   }
+  /* ================ CONTATO ===================*/
+  .secContato{
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+  
+
+    grid-area: contato;
+
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 20px;
+  }
+
+  .divEmail{
+    grid-row: 2/2;
+    grid-column: 2/3;
+
+  }
+  .divNumero{
+   grid-row: 2/2;
+   grid-column: 1/2;
+
+  }
+   .contatoTitulo{
+    letter-spacing: .8px;
+   }
+   .pContato{
+    color: #8E3EF1;
+    font-family: var(--fontFuncional);
+    font-weight: 500;
+    font-size: 1em;
+    margin-left: 14px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+   }
+   .iconEmail,.iconFone{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+   }
+   .pDadosContato{
+    margin-left: 30px;
+    margin-top: 10px;
+    color: #f8f8f8;
+
+    font-family: var(--fontTexto);
+    font-size: .8em;
+   }
+
+   @keyframes up{
+    from{
+      opacity: 1;
+      transform: translate(0px,0px,0px);
+    }
+    to{
+      opacity: 1;
+      transform: translate(-10px, 20px);
+    }
+   }
+
